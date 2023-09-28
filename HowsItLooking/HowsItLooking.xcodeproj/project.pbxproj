@@ -13,9 +13,10 @@
 		FCD210E42AC5882D00445163 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD210E32AC5882D00445163 /* Preview Assets.xcassets */; };
 		FCD210EE2AC5882D00445163 /* HowsItLookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD210ED2AC5882D00445163 /* HowsItLookingTests.swift */; };
 		FCD211072AC5887700445163 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211062AC5887700445163 /* WeatherTests.swift */; };
-		FCD2110A2AC588A400445163 /* weatherResults.json in Resources */ = {isa = PBXBuildFile; fileRef = FCD211092AC588A400445163 /* weatherResults.json */; };
+		FCD2110A2AC588A400445163 /* validWeatherResults.json in Resources */ = {isa = PBXBuildFile; fileRef = FCD211092AC588A400445163 /* validWeatherResults.json */; };
 		FCD2110D2AC588CF00445163 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD2110C2AC588CF00445163 /* TestHelpers.swift */; };
 		FCD211122AC58A7900445163 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211112AC58A7900445163 /* Weather.swift */; };
+		FCD211142AC590A500445163 /* invalidWeatherType.json in Resources */ = {isa = PBXBuildFile; fileRef = FCD211132AC590A500445163 /* invalidWeatherType.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +38,10 @@
 		FCD210E92AC5882D00445163 /* HowsItLookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowsItLookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD210ED2AC5882D00445163 /* HowsItLookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowsItLookingTests.swift; sourceTree = "<group>"; };
 		FCD211062AC5887700445163 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
-		FCD211092AC588A400445163 /* weatherResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weatherResults.json; sourceTree = "<group>"; };
+		FCD211092AC588A400445163 /* validWeatherResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = validWeatherResults.json; sourceTree = "<group>"; };
 		FCD2110C2AC588CF00445163 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		FCD211112AC58A7900445163 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		FCD211132AC590A500445163 /* invalidWeatherType.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalidWeatherType.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +113,8 @@
 		FCD211082AC5889B00445163 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				FCD211092AC588A400445163 /* weatherResults.json */,
+				FCD211132AC590A500445163 /* invalidWeatherType.json */,
+				FCD211092AC588A400445163 /* validWeatherResults.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -239,7 +242,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD2110A2AC588A400445163 /* weatherResults.json in Resources */,
+				FCD2110A2AC588A400445163 /* validWeatherResults.json in Resources */,
+				FCD211142AC590A500445163 /* invalidWeatherType.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

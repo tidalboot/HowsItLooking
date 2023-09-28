@@ -14,10 +14,11 @@ enum WeatherType: String, Decodable {
     case Snow
     case Clear
     case Clouds
+    case Unknown
 }
 
 struct CoreInformation: Decodable {
-    let type: WeatherType?
+    private(set) var type: WeatherType = .Unknown
     let description: String
     
     enum CodingKeys: CodingKey {
@@ -27,7 +28,8 @@ struct CoreInformation: Decodable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        type = try? values.decode(WeatherType.self, forKey: .main)
+        let weatherTypeAsRawString = try values.decode(String.self, forKey: .main)
+        type = WeatherType(rawValue: weatherTypeAsRawString) ?? .Unknown
         description = try values.decode(String.self, forKey: .description)
     }
 }
