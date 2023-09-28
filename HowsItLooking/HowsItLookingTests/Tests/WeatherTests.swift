@@ -15,13 +15,15 @@ final class WeatherTests: XCTestCase {
             let weatherData = try getData(fromJSON: "weatherResults")
             let weather = try JSONDecoder().decode(Weather.self, from: weatherData)
             
-            XCTAssertEqual(weather.type, .rain)
-            XCTAssertEqual(weather.description, "moderate rain")
-            XCTAssertEqual(weather.currentTemperature, 298.48)
-            XCTAssertEqual(weather.minumumTemperature, 297.56)
-            XCTAssertEqual(weather.maximumTemperature, 300.05)
-            XCTAssertEqual(weather.humidity, 64)
-            XCTAssertEqual(weather.chanceOfRain, 3.16)
+            XCTAssertNotNil(weather.coreInformation.first?.type, "Unable to parse a core weather type")
+            
+            XCTAssertEqual(weather.coreInformation.first?.type, WeatherType.Rain)
+            XCTAssertEqual(weather.coreInformation.first?.description, "moderate rain")
+            XCTAssertEqual(weather.mainDetails.currentTemperature, 298.48)
+            XCTAssertEqual(weather.mainDetails.minimumTemperature, 297.56)
+            XCTAssertEqual(weather.mainDetails.maximumTemperature, 300.05)
+            XCTAssertEqual(weather.mainDetails.humidity, 64)
+            XCTAssertEqual(weather.rainDetails.chanceOfRain, 3.16)
         } catch {
             XCTFail("Test failed with bubbled up error of: " + String(describing: error))
         }

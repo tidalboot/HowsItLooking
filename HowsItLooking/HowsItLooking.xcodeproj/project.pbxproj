@@ -8,24 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		FCD210DD2AC5882B00445163 /* HowsItLookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD210DC2AC5882B00445163 /* HowsItLookingApp.swift */; };
-		FCD210DF2AC5882B00445163 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD210DE2AC5882B00445163 /* ContentView.swift */; };
+		FCD210DF2AC5882B00445163 /* LocalWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD210DE2AC5882B00445163 /* LocalWeatherView.swift */; };
 		FCD210E12AC5882D00445163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD210E02AC5882D00445163 /* Assets.xcassets */; };
 		FCD210E42AC5882D00445163 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD210E32AC5882D00445163 /* Preview Assets.xcassets */; };
 		FCD210EE2AC5882D00445163 /* HowsItLookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD210ED2AC5882D00445163 /* HowsItLookingTests.swift */; };
 		FCD211072AC5887700445163 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211062AC5887700445163 /* WeatherTests.swift */; };
 		FCD2110A2AC588A400445163 /* weatherResults.json in Resources */ = {isa = PBXBuildFile; fileRef = FCD211092AC588A400445163 /* weatherResults.json */; };
 		FCD2110D2AC588CF00445163 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD2110C2AC588CF00445163 /* TestHelpers.swift */; };
+		FCD211122AC58A7900445163 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211112AC58A7900445163 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		FCD210EA2AC5882D00445163 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCD210D12AC5882B00445163 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCD210D82AC5882B00445163;
-			remoteInfo = HowsItLooking;
-		};
-		FCD210F42AC5882D00445163 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FCD210D12AC5882B00445163 /* Project object */;
 			proxyType = 1;
@@ -37,15 +31,15 @@
 /* Begin PBXFileReference section */
 		FCD210D92AC5882B00445163 /* HowsItLooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowsItLooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD210DC2AC5882B00445163 /* HowsItLookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowsItLookingApp.swift; sourceTree = "<group>"; };
-		FCD210DE2AC5882B00445163 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FCD210DE2AC5882B00445163 /* LocalWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWeatherView.swift; sourceTree = "<group>"; };
 		FCD210E02AC5882D00445163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCD210E32AC5882D00445163 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FCD210E92AC5882D00445163 /* HowsItLookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowsItLookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD210ED2AC5882D00445163 /* HowsItLookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowsItLookingTests.swift; sourceTree = "<group>"; };
-		FCD210F32AC5882D00445163 /* HowsItLookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowsItLookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD211062AC5887700445163 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		FCD211092AC588A400445163 /* weatherResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weatherResults.json; sourceTree = "<group>"; };
 		FCD2110C2AC588CF00445163 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		FCD211112AC58A7900445163 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +51,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FCD210E62AC5882D00445163 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCD210F02AC5882D00445163 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,7 +74,6 @@
 			children = (
 				FCD210D92AC5882B00445163 /* HowsItLooking.app */,
 				FCD210E92AC5882D00445163 /* HowsItLookingTests.xctest */,
-				FCD210F32AC5882D00445163 /* HowsItLookingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,8 +81,8 @@
 		FCD210DB2AC5882B00445163 /* HowsItLooking */ = {
 			isa = PBXGroup;
 			children = (
+				FCD2110F2AC58A5600445163 /* Features */,
 				FCD210DC2AC5882B00445163 /* HowsItLookingApp.swift */,
-				FCD210DE2AC5882B00445163 /* ContentView.swift */,
 				FCD210E02AC5882D00445163 /* Assets.xcassets */,
 				FCD210E22AC5882D00445163 /* Preview Content */,
 			);
@@ -146,6 +132,23 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		FCD2110F2AC58A5600445163 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FCD211102AC58A6D00445163 /* LocalWeather */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FCD211102AC58A6D00445163 /* LocalWeather */ = {
+			isa = PBXGroup;
+			children = (
+				FCD210DE2AC5882B00445163 /* LocalWeatherView.swift */,
+				FCD211112AC58A7900445163 /* Weather.swift */,
+			);
+			name = LocalWeather;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,24 +187,6 @@
 			productReference = FCD210E92AC5882D00445163 /* HowsItLookingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FCD210F22AC5882D00445163 /* HowsItLookingUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FCD211032AC5882D00445163 /* Build configuration list for PBXNativeTarget "HowsItLookingUITests" */;
-			buildPhases = (
-				FCD210EF2AC5882D00445163 /* Sources */,
-				FCD210F02AC5882D00445163 /* Frameworks */,
-				FCD210F12AC5882D00445163 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FCD210F52AC5882D00445163 /* PBXTargetDependency */,
-			);
-			name = HowsItLookingUITests;
-			productName = HowsItLookingUITests;
-			productReference = FCD210F32AC5882D00445163 /* HowsItLookingUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -216,10 +201,6 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					FCD210E82AC5882D00445163 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = FCD210D82AC5882B00445163;
-					};
-					FCD210F22AC5882D00445163 = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = FCD210D82AC5882B00445163;
 					};
@@ -240,7 +221,6 @@
 			targets = (
 				FCD210D82AC5882B00445163 /* HowsItLooking */,
 				FCD210E82AC5882D00445163 /* HowsItLookingTests */,
-				FCD210F22AC5882D00445163 /* HowsItLookingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -263,13 +243,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCD210F12AC5882D00445163 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,7 +250,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD210DF2AC5882B00445163 /* ContentView.swift in Sources */,
+				FCD210DF2AC5882B00445163 /* LocalWeatherView.swift in Sources */,
+				FCD211122AC58A7900445163 /* Weather.swift in Sources */,
 				FCD210DD2AC5882B00445163 /* HowsItLookingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,13 +266,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCD210EF2AC5882D00445163 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -306,11 +273,6 @@
 			isa = PBXTargetDependency;
 			target = FCD210D82AC5882B00445163 /* HowsItLooking */;
 			targetProxy = FCD210EA2AC5882D00445163 /* PBXContainerItemProxy */;
-		};
-		FCD210F52AC5882D00445163 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCD210D82AC5882B00445163 /* HowsItLooking */;
-			targetProxy = FCD210F42AC5882D00445163 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -532,42 +494,6 @@
 			};
 			name = Release;
 		};
-		FCD211042AC5882D00445163 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q5LYGJE7L5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tidalboot.HowsItLookingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HowsItLooking;
-			};
-			name = Debug;
-		};
-		FCD211052AC5882D00445163 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q5LYGJE7L5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tidalboot.HowsItLookingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HowsItLooking;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,15 +520,6 @@
 			buildConfigurations = (
 				FCD211012AC5882D00445163 /* Debug */,
 				FCD211022AC5882D00445163 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FCD211032AC5882D00445163 /* Build configuration list for PBXNativeTarget "HowsItLookingUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FCD211042AC5882D00445163 /* Debug */,
-				FCD211052AC5882D00445163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
