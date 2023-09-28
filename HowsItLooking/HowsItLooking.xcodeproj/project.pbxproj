@@ -12,8 +12,9 @@
 		FCD210E12AC5882D00445163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD210E02AC5882D00445163 /* Assets.xcassets */; };
 		FCD210E42AC5882D00445163 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD210E32AC5882D00445163 /* Preview Assets.xcassets */; };
 		FCD210EE2AC5882D00445163 /* HowsItLookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD210ED2AC5882D00445163 /* HowsItLookingTests.swift */; };
-		FCD210F82AC5882D00445163 /* HowsItLookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD210F72AC5882D00445163 /* HowsItLookingUITests.swift */; };
-		FCD210FA2AC5882D00445163 /* HowsItLookingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD210F92AC5882D00445163 /* HowsItLookingUITestsLaunchTests.swift */; };
+		FCD211072AC5887700445163 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211062AC5887700445163 /* WeatherTests.swift */; };
+		FCD2110A2AC588A400445163 /* weatherResults.json in Resources */ = {isa = PBXBuildFile; fileRef = FCD211092AC588A400445163 /* weatherResults.json */; };
+		FCD2110D2AC588CF00445163 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD2110C2AC588CF00445163 /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +43,9 @@
 		FCD210E92AC5882D00445163 /* HowsItLookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowsItLookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD210ED2AC5882D00445163 /* HowsItLookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowsItLookingTests.swift; sourceTree = "<group>"; };
 		FCD210F32AC5882D00445163 /* HowsItLookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowsItLookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCD210F72AC5882D00445163 /* HowsItLookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowsItLookingUITests.swift; sourceTree = "<group>"; };
-		FCD210F92AC5882D00445163 /* HowsItLookingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowsItLookingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCD211062AC5887700445163 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
+		FCD211092AC588A400445163 /* weatherResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weatherResults.json; sourceTree = "<group>"; };
+		FCD2110C2AC588CF00445163 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,6 @@
 			children = (
 				FCD210DB2AC5882B00445163 /* HowsItLooking */,
 				FCD210EC2AC5882D00445163 /* HowsItLookingTests */,
-				FCD210F62AC5882D00445163 /* HowsItLookingUITests */,
 				FCD210DA2AC5882B00445163 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,18 +114,36 @@
 		FCD210EC2AC5882D00445163 /* HowsItLookingTests */ = {
 			isa = PBXGroup;
 			children = (
+				FCD2110E2AC588D900445163 /* Tests */,
+				FCD2110B2AC588AA00445163 /* Helpers */,
+				FCD211082AC5889B00445163 /* JSON */,
 				FCD210ED2AC5882D00445163 /* HowsItLookingTests.swift */,
 			);
 			path = HowsItLookingTests;
 			sourceTree = "<group>";
 		};
-		FCD210F62AC5882D00445163 /* HowsItLookingUITests */ = {
+		FCD211082AC5889B00445163 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				FCD210F72AC5882D00445163 /* HowsItLookingUITests.swift */,
-				FCD210F92AC5882D00445163 /* HowsItLookingUITestsLaunchTests.swift */,
+				FCD211092AC588A400445163 /* weatherResults.json */,
 			);
-			path = HowsItLookingUITests;
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		FCD2110B2AC588AA00445163 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FCD2110C2AC588CF00445163 /* TestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FCD2110E2AC588D900445163 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FCD211062AC5887700445163 /* WeatherTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD2110A2AC588A400445163 /* weatherResults.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD211072AC5887700445163 /* WeatherTests.swift in Sources */,
 				FCD210EE2AC5882D00445163 /* HowsItLookingTests.swift in Sources */,
+				FCD2110D2AC588CF00445163 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD210FA2AC5882D00445163 /* HowsItLookingUITestsLaunchTests.swift in Sources */,
-				FCD210F82AC5882D00445163 /* HowsItLookingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
