@@ -21,7 +21,7 @@ final class WeatherTests: XCTestCase {
             XCTAssertEqual(weather.mainDetails.minimumTemperature, 297.56)
             XCTAssertEqual(weather.mainDetails.maximumTemperature, 300.05)
             XCTAssertEqual(weather.mainDetails.humidity, 64)
-            XCTAssertEqual(weather.rainDetails.chanceOfRain, 3.16)
+            XCTAssertEqual(weather.rainDetails?.chanceOfRain, 3.16)
         } catch {
             XCTFail("Test failed with bubbled up error of: " + String(describing: error))
         }

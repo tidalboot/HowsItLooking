@@ -22,6 +22,7 @@
 		FCD2111A2AC595D300445163 /* QueryParamBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211192AC595D300445163 /* QueryParamBuilderTests.swift */; };
 		FCD2111C2AC5991300445163 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD2111B2AC5991300445163 /* Extensions.swift */; };
 		FCD2111F2AC5A02000445163 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD2111E2AC5A02000445163 /* LoadingView.swift */; };
+		FCD211222AC5AC3E00445163 /* ResuableAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211212AC5AC3E00445163 /* ResuableAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		FCD211192AC595D300445163 /* QueryParamBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParamBuilderTests.swift; sourceTree = "<group>"; };
 		FCD2111B2AC5991300445163 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FCD2111E2AC5A02000445163 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FCD211202AC5A3F700445163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FCD211212AC5AC3E00445163 /* ResuableAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResuableAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 		FCD210DB2AC5882B00445163 /* HowsItLooking */ = {
 			isa = PBXGroup;
 			children = (
+				FCD211202AC5A3F700445163 /* Info.plist */,
 				FCD2111D2AC5A01300445163 /* SharedViews */,
 				FCD2111B2AC5991300445163 /* Extensions.swift */,
 				FCD211172AC5950700445163 /* WeatherAPIHandler.swift */,
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				FCD2111E2AC5A02000445163 /* LoadingView.swift */,
+				FCD211212AC5AC3E00445163 /* ResuableAlert.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD210DF2AC5882B00445163 /* LocalWeatherView.swift in Sources */,
+				FCD211222AC5AC3E00445163 /* ResuableAlert.swift in Sources */,
 				FCD2111C2AC5991300445163 /* Extensions.swift in Sources */,
 				FCD211162AC594A000445163 /* LocalWeatherViewModel.swift in Sources */,
 				FCD211122AC58A7900445163 /* Weather.swift in Sources */,
@@ -439,6 +445,8 @@
 				DEVELOPMENT_TEAM = Q5LYGJE7L5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HowsItLooking/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location when you are using the app to get you accurate local weather conditions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +476,8 @@
 				DEVELOPMENT_TEAM = Q5LYGJE7L5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HowsItLooking/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location when you are using the app to get you accurate local weather conditions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

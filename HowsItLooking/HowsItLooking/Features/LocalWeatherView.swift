@@ -11,22 +11,35 @@ struct LocalWeatherView: View {
     
     @StateObject var viewModel: LocalWeatherViewModel
     @State private var currentWeatherOpacity: CGFloat = 0
+    @State private var showErrorAlert = false
+
     
     var body: some View {
         VStack {
             viewForState()
+                .alert(isPresented: $showErrorAlert) {
+                    AlertBuilder.buildAlert(
+                        withTitleText: viewModel.alertTitle,
+                        actionText: viewModel.alertRetryText) {
+                            loadData()
+                        }
+                }
         }
         .onAppear(perform: {
-            Task {
-                do {
-                    try await viewModel.loadWeather()
-                } catch {
-                    let foo = error
-                }
-            }
+            viewModel.requestAccessToLocation()
         })
         .background(Color.background)
             .ignoresSafeArea(edges: .bottom)
+    }
+    
+    func loadData() {
+        Task {
+            do {
+                try await viewModel.loadWeather()
+            } catch {
+                showErrorAlert = true
+            }
+        }
     }
     
     @ViewBuilder
@@ -42,6 +55,15 @@ struct LocalWeatherView: View {
                 Text(viewModel.readableDescription())
                     .font(.system(size: 20, weight: .medium))
                     .foregroundStyle(.white)
+                Text(viewModel.currentTemp())
+                    .font(.system(size: 14, weight: .regular))
+                    .foregroundStyle(.white)
+                Text(viewModel.minTemp())
+                    .font(.system(size: 14, weight: .regular))
+                    .foregroundStyle(.white)
+                Text(viewModel.maxTemp())
+                    .font(.system(size: 14, weight: .regular))
+                    .foregroundStyle(.white)
             }
             .contentTransition(.opacity)
             .listStyle(PlainListStyle())
@@ -49,19 +71,56 @@ struct LocalWeatherView: View {
         Spacer()
     }
     
-    @ViewBuilder
-    private func viewForState() -> some View {
-        if viewModel.loadedWeather {
-            weatherView()
-            .opacity(currentWeatherOpacity)
-            .onAppear {
-                withAnimation(.easeIn(duration: 1).delay(1)) {
-                    currentWeatherOpacity = 1
-                }
+    @ViewBuilder func accessDenied() -> some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                    .frame(width: 50)
+                Text(viewModel.accessDeniedText())
+                    .multilineTextAlignment(.center)
+                    .font(.system(size: 14, weight: .regular))
+                    .foregroundStyle(.white)
+                Spacer()
+                    .frame(width: 50)
             }
-        } else {
+
+            Spacer()
+        }
+        .frame(maxWidth: .infinity)
+    }
+    
+    @ViewBuilder
+    private func accessGranted() -> some View {
+        if viewModel.locationAccessNeeded {
             LoadingView()
                 .frame(maxWidth: .infinity)
+        } else {
+            if viewModel.loadedWeather {
+                weatherView()
+                .opacity(currentWeatherOpacity)
+                .onAppear {
+                    withAnimation(.easeIn(duration: 1).delay(1)) {
+                        currentWeatherOpacity = 1
+                    }
+                }
+            } else {
+                LoadingView()
+                    .frame(maxWidth: .infinity)
+                    .onAppear(perform: {
+                        loadData()
+                    })
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private func viewForState() -> some View {
+        
+        if viewModel.accessDenied {
+            accessDenied()
+        } else {
+            accessGranted()
         }
     }
 }
