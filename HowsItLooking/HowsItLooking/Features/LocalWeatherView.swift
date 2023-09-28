@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LocalWeatherView: View {
+    
+    @StateObject var viewModel: LocalWeatherViewModel
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,9 +19,18 @@ struct LocalWeatherView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear(perform: {
+            Task {
+                do {
+                    try await viewModel.loadWeather()
+                } catch {
+                    let foo = error
+                }
+            }
+        })
     }
 }
 
 #Preview {
-    LocalWeatherView()
+    LocalWeatherView(viewModel: LocalWeatherViewModel())
 }

@@ -17,6 +17,10 @@
 		FCD2110D2AC588CF00445163 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD2110C2AC588CF00445163 /* TestHelpers.swift */; };
 		FCD211122AC58A7900445163 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211112AC58A7900445163 /* Weather.swift */; };
 		FCD211142AC590A500445163 /* invalidWeatherType.json in Resources */ = {isa = PBXBuildFile; fileRef = FCD211132AC590A500445163 /* invalidWeatherType.json */; };
+		FCD211162AC594A000445163 /* LocalWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211152AC594A000445163 /* LocalWeatherViewModel.swift */; };
+		FCD211182AC5950700445163 /* WeatherAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211172AC5950700445163 /* WeatherAPIHandler.swift */; };
+		FCD2111A2AC595D300445163 /* QueryParamBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211192AC595D300445163 /* QueryParamBuilderTests.swift */; };
+		FCD2111C2AC5991300445163 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD2111B2AC5991300445163 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,10 @@
 		FCD2110C2AC588CF00445163 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		FCD211112AC58A7900445163 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		FCD211132AC590A500445163 /* invalidWeatherType.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalidWeatherType.json; sourceTree = "<group>"; };
+		FCD211152AC594A000445163 /* LocalWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWeatherViewModel.swift; sourceTree = "<group>"; };
+		FCD211172AC5950700445163 /* WeatherAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIHandler.swift; sourceTree = "<group>"; };
+		FCD211192AC595D300445163 /* QueryParamBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParamBuilderTests.swift; sourceTree = "<group>"; };
+		FCD2111B2AC5991300445163 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,8 @@
 		FCD210DB2AC5882B00445163 /* HowsItLooking */ = {
 			isa = PBXGroup;
 			children = (
+				FCD2111B2AC5991300445163 /* Extensions.swift */,
+				FCD211172AC5950700445163 /* WeatherAPIHandler.swift */,
 				FCD2110F2AC58A5600445163 /* Features */,
 				FCD210DC2AC5882B00445163 /* HowsItLookingApp.swift */,
 				FCD210E02AC5882D00445163 /* Assets.xcassets */,
@@ -131,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				FCD211062AC5887700445163 /* WeatherTests.swift */,
+				FCD211192AC595D300445163 /* QueryParamBuilderTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 			children = (
 				FCD210DE2AC5882B00445163 /* LocalWeatherView.swift */,
 				FCD211112AC58A7900445163 /* Weather.swift */,
+				FCD211152AC594A000445163 /* LocalWeatherViewModel.swift */,
 			);
 			name = LocalWeather;
 			sourceTree = "<group>";
@@ -255,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD210DF2AC5882B00445163 /* LocalWeatherView.swift in Sources */,
+				FCD2111C2AC5991300445163 /* Extensions.swift in Sources */,
+				FCD211162AC594A000445163 /* LocalWeatherViewModel.swift in Sources */,
 				FCD211122AC58A7900445163 /* Weather.swift in Sources */,
+				FCD211182AC5950700445163 /* WeatherAPIHandler.swift in Sources */,
 				FCD210DD2AC5882B00445163 /* HowsItLookingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD2111A2AC595D300445163 /* QueryParamBuilderTests.swift in Sources */,
 				FCD211072AC5887700445163 /* WeatherTests.swift in Sources */,
 				FCD210EE2AC5882D00445163 /* HowsItLookingTests.swift in Sources */,
 				FCD2110D2AC588CF00445163 /* TestHelpers.swift in Sources */,

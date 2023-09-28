@@ -58,7 +58,7 @@ struct MainDetails: Decodable {
 
 struct WindDetails: Decodable {
     let speed: Double
-    let gust: Double
+    let gust: Double?
 }
 
 struct RainDetails: Decodable {
@@ -79,7 +79,7 @@ struct Weather: Decodable {
     let coreInformation: [CoreInformation]
     let mainDetails: MainDetails
     let windDetails: WindDetails
-    let rainDetails: RainDetails
+    let rainDetails: RainDetails?
     
     enum CodingKeys: CodingKey {
         case weather
@@ -93,6 +93,6 @@ struct Weather: Decodable {
         coreInformation = try values.decode([CoreInformation].self, forKey: .weather)
         mainDetails = try values.decode(MainDetails.self, forKey: .main)
         windDetails = try values.decode(WindDetails.self, forKey: .wind)
-        rainDetails = try values.decode(RainDetails.self, forKey: .rain)
+        rainDetails = try values.decodeIfPresent(RainDetails.self, forKey: .rain)
     }
 }
