@@ -21,6 +21,7 @@
 		FCD211182AC5950700445163 /* WeatherAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211172AC5950700445163 /* WeatherAPIHandler.swift */; };
 		FCD2111A2AC595D300445163 /* QueryParamBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD211192AC595D300445163 /* QueryParamBuilderTests.swift */; };
 		FCD2111C2AC5991300445163 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD2111B2AC5991300445163 /* Extensions.swift */; };
+		FCD2111F2AC5A02000445163 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD2111E2AC5A02000445163 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		FCD211172AC5950700445163 /* WeatherAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIHandler.swift; sourceTree = "<group>"; };
 		FCD211192AC595D300445163 /* QueryParamBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParamBuilderTests.swift; sourceTree = "<group>"; };
 		FCD2111B2AC5991300445163 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FCD2111E2AC5A02000445163 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		FCD210DB2AC5882B00445163 /* HowsItLooking */ = {
 			isa = PBXGroup;
 			children = (
+				FCD2111D2AC5A01300445163 /* SharedViews */,
 				FCD2111B2AC5991300445163 /* Extensions.swift */,
 				FCD211172AC5950700445163 /* WeatherAPIHandler.swift */,
 				FCD2110F2AC58A5600445163 /* Features */,
@@ -162,6 +165,14 @@
 				FCD211152AC594A000445163 /* LocalWeatherViewModel.swift */,
 			);
 			name = LocalWeather;
+			sourceTree = "<group>";
+		};
+		FCD2111D2AC5A01300445163 /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				FCD2111E2AC5A02000445163 /* LoadingView.swift */,
+			);
+			path = SharedViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +282,7 @@
 				FCD211162AC594A000445163 /* LocalWeatherViewModel.swift in Sources */,
 				FCD211122AC58A7900445163 /* Weather.swift in Sources */,
 				FCD211182AC5950700445163 /* WeatherAPIHandler.swift in Sources */,
+				FCD2111F2AC5A02000445163 /* LoadingView.swift in Sources */,
 				FCD210DD2AC5882B00445163 /* HowsItLookingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

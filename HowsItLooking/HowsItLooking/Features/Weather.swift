@@ -80,12 +80,14 @@ struct Weather: Decodable {
     let mainDetails: MainDetails
     let windDetails: WindDetails
     let rainDetails: RainDetails?
+    let name: String
     
     enum CodingKeys: CodingKey {
         case weather
         case main
         case wind
         case rain
+        case name
     }
     
     init(from decoder: Decoder) throws {
@@ -94,5 +96,6 @@ struct Weather: Decodable {
         mainDetails = try values.decode(MainDetails.self, forKey: .main)
         windDetails = try values.decode(WindDetails.self, forKey: .wind)
         rainDetails = try values.decodeIfPresent(RainDetails.self, forKey: .rain)
+        name = try values.decode(String.self, forKey: .name)
     }
 }
