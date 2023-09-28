@@ -74,6 +74,12 @@ struct RainDetails: Decodable {
     }
 }
 
+/*
+ There are a number of these properties that we're currently not making use of on the weather screen
+ This was purely down to time and when I first scoped out what properties would be useful to display, adding a
+ few extras such as the wind added very little time from this side of things and so seemed like an easy win
+ Unfortunately though because I ran out of time after I implemented everything else these properties are sitting here waiting to be used as of now (though they are being tested)
+ */
 struct Weather: Decodable {
     
     let coreInformation: [CoreInformation]

@@ -13,7 +13,6 @@ struct LocalWeatherView: View {
     @State private var currentWeatherOpacity: CGFloat = 0
     @State private var showErrorAlert = false
 
-    
     var body: some View {
         VStack {
             viewForState()
@@ -47,6 +46,11 @@ struct LocalWeatherView: View {
         Spacer()
             .frame(height: 80)
             LazyVStack {
+                /*
+                A lot of these Text elements are very similar.
+                With more time we'd want to start making reusable versions of them such as "heading", "subheading" and
+                 "title" so that we can reduce this boilerplate all over the place
+                 */
                 Text(viewModel.locationName())
                     .font(.system(size: 40, weight: .bold))
                     .foregroundStyle(.white)
@@ -114,9 +118,14 @@ struct LocalWeatherView: View {
         }
     }
     
+    /*
+     😬 nasty
+     But unfortunately I ran out of time and in the case of either having this weird access denied
+     property or not having the app properly handle when people deny access to location services the
+     former felt like the best approach since, whilst it's nasty for now, it does work
+     */
     @ViewBuilder
     private func viewForState() -> some View {
-        
         if viewModel.accessDenied {
             accessDenied()
         } else {
